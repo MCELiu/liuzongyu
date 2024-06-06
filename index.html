@@ -3,34 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>好玩的HTML页面</title>
+    <title>端午节快乐</title>
     <style>
         body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f8ff;
             font-family: Arial, sans-serif;
-            text-align: center;
-            padding: 50px;
         }
-        h1 {
-            color: #333;
-        }
-        button {
-            padding: 10px 20px;
+        .cat {
             font-size: 16px;
-            cursor: pointer;
+            line-height: 1.2;
+            white-space: pre;
+            animation: bounce 1s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <h1>欢迎来到禹哥做的好玩的HTML页面！</h1>
-    <p>点击下面的按钮，看看会发生什么！</p>
-    <button onclick="changeBackgroundColor()">改变背景颜色</button>
-
-    <script>
-        function changeBackgroundColor() {
-            const colors = ['#FF5733', '#33FF57', '#3357FF', '#F0E68C', '#FF69B4', '#8A2BE2', '#7FFF00'];
-            const randomColor = colors[Math.floor(Math.random() * colors.length)];
-            document.body.style.backgroundColor = randomColor;
-        }
-    </script>
+    <div class="cat">
+      /\_/\  
+     ( o.o ) 
+      > ^ <
+     /     \  
+    |       |  
+    |       |  
+     \_ _ _/   
+    </div>
+    <div class="message">祝您端午节快乐！</div>
 </body>
 </html>
+
